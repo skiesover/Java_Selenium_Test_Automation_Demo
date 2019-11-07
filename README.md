@@ -1,4 +1,4 @@
-# Java_Selenium_Test_Automation_Project
+# Java_Selenium_Test_Automation_Demo
 Test Automation project written on Java, Selenium WebDriver &amp; TestNG.
 This is Parabank (fake banking website) Demo Project that includes suite of Smoke Tests.
 
