@@ -6,7 +6,7 @@ Author: **Ildar Lutfullin**
 
 Tools used to create the framework:
 1. Java
-2. Selenium WebDrivera
+2. Selenium WebDriver
 3. TestNG framework
 
 ## Project Decription
