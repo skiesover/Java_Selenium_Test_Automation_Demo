@@ -9,10 +9,10 @@ public class GlobalConstants {
 
 
     // user credentials
-    public static final String BEANWORKS_USER = "Beanworks_Test";
-    public static final String PASSWORD = "Beanworks1!";
-    public static final String BEANWORKS_USER_FIRST_NAME = "Beanworks_Test";
-    public static final String BEANWORKS_USER_LAST_NAME = "Beanworks_Test";
+    public static final String TEST_USER = "skiesover";
+    public static final String PASSWORD = "password";
+    public static final String TEST_USER_FIRST_NAME = "Ildar";
+    public static final String TEST_USER_LAST_NAME = "Lutfullin";
 
     // other constants
     public static final String PARABANK_URL = "https://parabank.parasoft.com/";

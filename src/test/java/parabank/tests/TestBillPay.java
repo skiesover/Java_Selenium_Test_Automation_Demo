@@ -29,7 +29,7 @@ public class TestBillPay extends BaseClass {
 
     public void testBillPay() {
 
-        services.loginToParabankAsUser(BEANWORKS_USER, PASSWORD);
+        services.loginToParabankAsUser(TEST_USER, PASSWORD);
 
         currentBalance = services
                 .checkAccountCurrentBalance(ACCOUNT_27330);

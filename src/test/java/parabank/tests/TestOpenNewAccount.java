@@ -28,7 +28,7 @@ public class TestOpenNewAccount extends BaseClass {
     public void testOpenNewAccount() {
 
         services
-                .loginToParabankAsUser(BEANWORKS_USER, PASSWORD)
+                .loginToParabankAsUser(TEST_USER, PASSWORD)
                 .clickOpenNewAccountLink()
                 .selectAccountType(SAVINGS)
                 .clickOpenNewAccountButton()

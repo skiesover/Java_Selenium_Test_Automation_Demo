@@ -24,7 +24,7 @@ public class TestUserLogOut extends BaseClass {
     public void testUserLogOut() {
 
         new Services()
-                .loginToParabankAsUser(BEANWORKS_USER, PASSWORD)
+                .loginToParabankAsUser(TEST_USER, PASSWORD)
                 .clickLogOutLink()
                 .verifyLoggedOutSuccessfully();
     }
