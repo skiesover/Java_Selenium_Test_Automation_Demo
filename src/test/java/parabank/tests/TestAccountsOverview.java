@@ -28,7 +28,7 @@ public class TestAccountsOverview extends BaseClass {
     public void testAccountsOverview() {
 
         services
-                .loginToParabankAsUser(TEST_USER, PASSWORD)
+                .loginToParabankAsUser(TEST_USER)
                 .clickAccountsOverviewLink()
                 .verifyAccountOverviewTableHeaders();
 

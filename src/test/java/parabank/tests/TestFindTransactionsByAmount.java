@@ -28,7 +28,7 @@ public class TestFindTransactionsByAmount extends BaseClass {
 
     public void testFindTransactionsByAmount() {
 
-        services.loginToParabankAsUser(TEST_USER, PASSWORD);
+        services.loginToParabankAsUser(TEST_USER);
 
         services.transferFunds(AMOUNT_3, ACCOUNT_27108, ACCOUNT_27330);
 

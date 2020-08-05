@@ -7,12 +7,8 @@ public class GlobalConstants {
     public static final String UI = "ui";
     public static final String SMOKE = "smoke";
 
-
-    // user credentials
+    // users
     public static final String TEST_USER = "skiesover";
-    public static final String PASSWORD = "password";
-    public static final String TEST_USER_FIRST_NAME = "Ildar";
-    public static final String TEST_USER_LAST_NAME = "Lutfullin";
 
     // other constants
     public static final String PARABANK_URL = "https://parabank.parasoft.com/";

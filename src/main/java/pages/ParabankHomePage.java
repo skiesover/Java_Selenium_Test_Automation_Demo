@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import utils.BaseClass;
+import utils.Services;
+import utils.User;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -67,7 +69,11 @@ public class ParabankHomePage extends BaseClass {
         return this;
     }
 
-    public ParabankHomePage checkLoggedInSuccessText(String firstName, String lastName) {
+    public ParabankHomePage checkLoggedInSuccessText(String userId) {
+        User user = Services.getUser(userId);
+        String firstName = user.getFirstName();
+        String lastName = user.getLastName();
+
         String expectedMessage = "Welcome " + firstName + SPACE + lastName;
         assertEquals(driver.findElement(LOGGED_IN_SUCCESS_TEXT).getText(), expectedMessage);
 

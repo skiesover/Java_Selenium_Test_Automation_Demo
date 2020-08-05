@@ -30,7 +30,7 @@ public class TestTransferFunds extends BaseClass {
 
     public void testTransferFunds() {
 
-        services.loginToParabankAsUser(TEST_USER, PASSWORD);
+        services.loginToParabankAsUser(TEST_USER);
 
         currentBalance = services
                 .checkAccountCurrentBalance(ACCOUNT_27330);

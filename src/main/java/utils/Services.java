@@ -1,7 +1,13 @@
 package utils;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import pages.*;
 import utils.GlobalConstants.AccountId;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
 import static org.testng.Assert.assertEquals;
 import static utils.GlobalConstants.PARABANK_URL;
@@ -15,8 +21,11 @@ public class Services extends BaseClass {
     private AccountsOverviewBlock accountsOverviewBlock = new AccountsOverviewBlock();
     private AccountDetailsBlock accountDetailsBlock = new AccountDetailsBlock();
 
-    // todo: pass only user id
-    public ParabankHomePage loginToParabankAsUser(String username, String password) {
+    public ParabankHomePage loginToParabankAsUser(String userId) {
+        User user = getUser(userId);
+        String username = user.getUsername();
+        String password = user.getPassword();
+
         this
                 .navigateToParabankHomePage()
                 .enterUsername(username)
@@ -24,6 +33,21 @@ public class Services extends BaseClass {
                 .clickLoginButton();
 
         return parabankHomePage;
+    }
+
+    public static User getUser(String userId) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        List<User> users;
+        try {
+            users = objectMapper.readValue(new File("users.json"), new TypeReference<List<User>>() {});
+            return users.stream()
+                    .filter(usr -> userId.equals(usr.getUsername()))
+                    .findAny()
+                    .orElse(null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public AccountDetailsBlock verifyAccountId() {

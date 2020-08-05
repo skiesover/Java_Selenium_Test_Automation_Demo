@@ -21,8 +21,8 @@ public class TestUserLogIn extends BaseClass {
     public void testUserLogIn() {
 
         new Services()
-                .loginToParabankAsUser(TEST_USER, PASSWORD)
-                .checkLoggedInSuccessText(TEST_USER_FIRST_NAME, TEST_USER_LAST_NAME)
+                .loginToParabankAsUser(TEST_USER)
+                .checkLoggedInSuccessText(TEST_USER)
                 .checkLogOutLinkDisplayed();
     }
 }
