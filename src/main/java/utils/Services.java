@@ -15,6 +15,7 @@ public class Services extends BaseClass {
     private AccountsOverviewBlock accountsOverviewBlock = new AccountsOverviewBlock();
     private AccountDetailsBlock accountDetailsBlock = new AccountDetailsBlock();
 
+    // todo: pass only user id
     public ParabankHomePage loginToParabankAsUser(String username, String password) {
         this
                 .navigateToParabankHomePage()
